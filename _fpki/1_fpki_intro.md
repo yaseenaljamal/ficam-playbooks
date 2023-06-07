@@ -21,8 +21,8 @@ subnav:
 
 Welcome to the **Federal Public Key Infrastructure (FPKI) Guides**! In these guides, you will find commonly used links, tools, tips, and information for the FPKI.
 
-These guides are [open source](https://github.com/gsa/ficam-playbooks){:target="_blank"}{:rel="noopener noreferrer"} and a _work in progress_ and we [welcome contributions](https://www.idmanagement.gov/contribute/){:target="_blank"}{:rel="noopener noreferrer"} from our colleagues.  We encourage you to contribute and share information you think is helpful for the Federal PKI community.
- 
+These guides are [open source](https://github.com/gsa/ficam-playbooks){:target="_blank"}{:rel="noopener noreferrer"} and a_work in progress_and we [welcome contributions](https://www.idmanagement.gov/contribute/){:target="_blank"}{:rel="noopener noreferrer"} from our colleagues.  We encourage you to contribute and share information you think is helpful for the Federal PKI community.
+
 ## What Is the Federal PKI?
 
 The Federal PKI is a network of certification authorities (CAs) that issue:
@@ -39,11 +39,12 @@ The Federal PKI includes U.S. federal, state, local, tribal, territorial, and in
 Use the [FPKI Graph]({{site.baseurl}}/fpki/tools/fpkigraph/) to see the relationships between the certification authorities in the Federal PKI ecosystem. It graphically depicts how each certification authority links to another through cross-certificates, subordinate certificates, or bridge CAs.
 
 ### What Is an Example of an Identity Certificate?
+
 A PIV certificate is a simple example.  Although there are many types of identity certificates, it's easiest to explain **PIV** certificates since you might have one:
 
-* Identity certificates are issued and digitally signed by a _certification authority_.  
-* The _certification authority_ that issued and digitally signed your PIV certificates is called an _intermediate certification authority_. The _intermediate certification authority's certificate_ was issued by another _certification authority_.  
-* This process of issuing and signing continues until there is one _certification authority_ that is called the _root certification authority_.
+- Identity certificates are issued and digitally signed by a _certification authority_.  
+- The _certification authority_ that issued and digitally signed your PIV certificates is called an _intermediate certification authority_. The _intermediate certification authority's certificate_ was issued by another _certification authority_.  
+- This process of issuing and signing continues until there is one _certification authority_ that is called the _root certification authority_.
 
 <img src="{{site.baseurl}}/assets/fpki/pivcertificatechain_small.png" alt="An example of an identity certificate with intermediate and root." width="506" height="268">
 
@@ -55,25 +56,25 @@ For the U.S. federal government Executive Branch agencies, there is one root cer
 
 All federal agencies should use the Federal PKI for:
 
-* Facilities access, network authentication, and some application authentication for applications based on a risk assessment
-* Document sharing and digital signatures
-* Signed and encrypted email communications across federal agencies
+- Facilities access, network authentication, and some application authentication for applications based on a risk assessment
+- Document sharing and digital signatures
+- Signed and encrypted email communications across federal agencies
 
 The Federal PKI provides four core technical capabilities:
 
 <img src="{{site.baseurl}}/assets/fpki/fpki-core.png" alt="An illustration of the four core FPKI capabilities." width="800" height="400">
 <p align="center"><b>The Four Core Federal PKI Capabilities</b></p>
 
-* Trust with federal agencies and industry
-* Support for technical non-repudiation
-* Authentication and encryption
-* Digital signatures
+- Trust with federal agencies and industry
+- Support for technical non-repudiation
+- Authentication and encryption
+- Digital signatures
 
-These four core capabilities are made possible by leveraging digital certificates; their policies, standards, and processes; and a mission-critical trust infrastructure. 
+These four core capabilities are made possible by leveraging digital certificates; their policies, standards, and processes; and a mission-critical trust infrastructure.
 
 ## Why Is the Federal PKI Important?
 
-The Federal PKI is important to federal agencies, other government entities, and businesses that need access to federal facilities or participate in delivering federal government services.    
+The Federal PKI is important to federal agencies, other government entities, and businesses that need access to federal facilities or participate in delivering federal government services.
 
 |**Benefit**|**Description**|
 |-----------|---------------|
@@ -83,9 +84,5 @@ The Federal PKI is important to federal agencies, other government entities, and
 |**Return on Investment**| The Federal PKI improves business processes and efficiencies.  For example, leveraging digital signing, encryption, and non-repudiation allows federal agencies to migrate from manual processing to automated processing, especially around document processing/sharing, and enhances communications between two or more federal employees for internal efficiency and effectiveness.  
 
 ### Where Can I Find the Policies and Standards?
-* [X.509 Certificate Policy for the U.S. Federal PKI Common Policy Framework](https://www.idmanagement.gov/docs/fpki-x509-cert-policy-common.pdf){:target="_blank"}{:rel="noopener noreferrer"} is the certificate policy for the U.S. Federal Root Certification Authority.
-* [Common Policy X.509 Certificate and Certificate Revocation List (CRL) Profiles](https://www.idmanagement.gov/docs/fpki-x509-cert-profile-common.pdf){:target="_blank"}{:rel="noopener noreferrer"} specifies certificate and CRL extensions profiles for certificates and CRLs issued under COMMON.
-* [X.509 Certificate Policy for the Federal Bridge Certification Authority (FBCA)](https://www.idmanagement.gov/docs/fpki-x509-cert-policy-fbca.pdf){:target="_blank"}{:rel="noopener noreferrer"} is the certificate policy for the FBCA.
-* [X.509 Certificate and CRL Extensions Profile for the FBCA](https://www.idmanagement.gov/docs/fpki-x509-cert-profiles-fbca.pdf){:target="_blank"}{:rel="noopener noreferrer"} specifies certificate and CRL extensions profiles for Federal PKI infrastructure systems.
-* [X.509 Certificate and CRL Extensions Profile for PIV-I Cards](https://www.idmanagement.gov/docs/fpki-x509-cert-profiles-pivi.pdf){:target="_blank"}{:rel="noopener noreferrer"} specifies certificate and CRL extensions profiles for use with Personal Identity Verification Interoperable (PIV-I) cards.
-* [OMB Circular A-130, Managing Information as a Strategic Resource (2016)](https://obamawhitehouse.archives.gov/sites/default/files/omb/assets/OMB/circulars/a130/a130revised.pdf?msclkid=b1259175c7f211ec8144311a36ca5067){:target="_blank"}{:rel="noopener noreferrer"} establishes general policy for the planning, budgeting, governance, acquisition, and management of federal information, personnel, equipment, funds, IT resources, and supporting infrastructure and services.
+
+[See them at the new FICAM Policy Matrix](https://federalist-cf03235f-a054-4178-aafb-4e1e61e0d42c.sites.pages.cloud.gov/preview/gsa/idmanagement.gov/0512-identity-policy-matrix/governance/policymatrix/)
