@@ -54,6 +54,7 @@ December 29, 2022
 This playbook is a collaboration among the General Services Administration Office of Government-wide Policy Identity Assurance and Trusted Access Division, Federal Chief Information Security Officer Council ICAM Subcommittee, and the Department of Homeland Security (DHS) Cybersecurity and Infrastructure Security Agency (CISA) Continuous Diagnostic and Mitigation (CDM) Program.
 
 # Executive Summary
+
 Privileged users are unique user types that perform various security-related duties. As such, privileged accounts are most likely to be targeted by cybercriminals or abused by malicious insiders. **Unwanted behavior or compromised privileged accounts are responsible for the most high-profile federal and private security breaches.** It is a critical Identity, Credential, and Access Management (ICAM) capability to secure privileged access.
 
 There are three prominent use cases to identify a privileged account or user:
@@ -99,9 +100,10 @@ Government employees and contractors need a privileged account to perform necess
 
 Implementing privileged user management may require a multi-year project to add capabilities and services based on your agency's risk and budget. The DHS CDM Program is one of the primary means for most agencies to architect and implement privileged access management.
 
-{% include alert-success.html heading="Is this Privileged Access Management or Account Security?" content="Different vendors may use other terms for their products. Some vendors may use Privileged Access or Account Management (PAM), Privileged Identity Management (PIM), Privileged Security, or something in between. For the intent of this playbook, the agnostic privileged identity is used to encompass different privileged activities." %} 
+{% include alert-success.html heading="Is this Privileged Access Management or Account Security?" content="Different vendors may use other terms for their products. Some vendors may use Privileged Access or Account Management (PAM), Privileged Identity Management (PIM), Privileged Security, or something in between. For the intent of this playbook, the agnostic privileged identity is used to encompass different privileged activities." %}
 
 # Step 1. Develop a Privileged User Policy
+
 Privilege compromise within an agency's privileged user population can significantly hurt its mission. See Figure 1 for the _Privilege Compromise Journey_. Poor management of an agency's privileged user population can lead to catastrophic events such as:
 
 - exfiltration of sensitive or classified data;
@@ -129,7 +131,7 @@ An insider threat is when a government employee or contractor accidentally, comp
 | **Complacent** | Overall lax or careless approach to security. | 1. Create user accounts and assign privileges without the appropriate review and approval.<br> 2. Share system account passwords. |
 | **Malicious** | Intentionally disrupt, threaten, or endanger an agency's activities or assets. | 1. Unwanted, purposeful disclosure or of information.<br> 2. Introduce malicious code, malware, Trojan horse, and viruses.<br> 3. Destroy or modify system audit logs.|
 
-{% include alert-error.html heading="Insider Threat Mitigation" content="Because of privileged users' elevated access, unwanted behavior by these individuals can significantly compromise agency assets or operations. Understanding insider threat classifications and unwanted behavior will support implementing an agency's privileged user management. A combination of procedural and technical measures can help agencies reduce the range of unwanted behavior." %} 
+{% include alert-error.html heading="Insider Threat Mitigation" content="Because of privileged users' elevated access, unwanted behavior by these individuals can significantly compromise agency assets or operations. Understanding insider threat classifications and unwanted behavior will support implementing an agency's privileged user management. A combination of procedural and technical measures can help agencies reduce the range of unwanted behavior." %}
 
 ## Account Compromise
 
@@ -157,7 +159,7 @@ A privileged user policy interacts with multiple initiatives across an agency. E
 
 Privileged user management should encompass all privileged users within a Chief Information Officer (CIO) 's Federal IT Acquisition Reform Act (FITARA) responsibility, including enterprise and mission applications.
 
-{% include alert-info.html heading="Who's your privileged user champion?" content="Agencies should choose a champion to advocate for their privileged user management process. The champion should either have executive support and/or is an executive who can effectively encourage, support, and direct implementation. Conduct a pilot by identifying an initial group of privileged users and accounts supporting the change management process required to overcome change resistance. Implement the change incrementally within the champion organization and expand to other privileged user groups based on readiness. Stay focused on your defined program objectives to win greater agency-wide support. Conduct after actions after each deployment to ease subsequent integrations." %} 
+{% include alert-info.html heading="Who's your privileged user champion?" content="Agencies should choose a champion to advocate for their privileged user management process. The champion should either have executive support and/or is an executive who can effectively encourage, support, and direct implementation. Conduct a pilot by identifying an initial group of privileged users and accounts supporting the change management process required to overcome change resistance. Implement the change incrementally within the champion organization and expand to other privileged user groups based on readiness. Stay focused on your defined program objectives to win greater agency-wide support. Conduct after actions after each deployment to ease subsequent integrations." %}
 
 ## Policy Objectives
 
@@ -181,7 +183,7 @@ Even though agency missions may differ, the objectives of privileged user manage
 
 In addition to setting a policy, strategy, and technical direction, an agency should evaluate the risk of all users to its resources by conducting a [Digital Identity Risk Assessment]({{site.baseurl}}/playbooks/dira). The DIRA process identifies the risk of user transactions and determines a minimum identity assurance, authenticator assurance, and federation assurance level outlined in [NIST Special Publication 800-63-3](https://pages.nist.gov/800-63-3/sp800-63-3.html){:target="_blank"}{:rel="noopener noreferrer"}.
 
-{% include alert-info.html heading="Why Additional Controls?" content="Most attacks start by compromising lower-level accounts. An attacker can find an orphaned privileged account through network discovery and escalate their privileges to access applications, data, and compromise entire agency networks or data sets." %} 
+{% include alert-info.html heading="Why Additional Controls?" content="Most attacks start by compromising lower-level accounts. An attacker can find an orphaned privileged account through network discovery and escalate their privileges to access applications, data, and compromise entire agency networks or data sets." %}
 
 Metrics are an essential aspect of privileged user management which can help identify risks and efficiencies. The following metrics are modified from the [GSA DevSecOps Guide](https://tech.gsa.gov/guides/dev_sec_ops_guide/){:target="_blank"}{:rel="noopener noreferrer"}.
 
@@ -196,6 +198,7 @@ Metrics are an essential aspect of privileged user management which can help ide
 | Secret rotation frequency | A set period to rotate a secret such as after every use or every 30 days. |
 
 # Step 2. Define and Identify
+
 Agencies are responsible for managing all user privileges. Individuals entrusted with privileged accounts comprise an agency's privileged user population.
 
 ## Define a Privileged User
@@ -236,17 +239,21 @@ The most common definition of a privileged user is a user who is authorized (and
 Once the definition of a privileged user is established, an agency can identify its privileged users and resources by following this process:
 
 1. Identify and document mission-critical and sensitive services (most likely your high-value asset list) as a starting point. Every IT system has privileged users. An agency can also check system security plans to help identify privileged roles. Services can be further grouped by:
+
 - Hardware
 - Software
 - Operating system
 - Access type (externally accessible, internally accessible, or others)
 - Physical and logical location (on-premises, cloud service provider, or others)
 - Data sensitivity
+
 2. Identify and document IT staff roles, roles requiring separation of duties, trusted roles, and associated accounts that require elevated access to perform their role. The IT staff role may include identifying a specific cyber workforce position or role required to manage the system.
 3. Perform an automated analysis of permissions assigned versus those in use. The ongoing existence of unused but active permissions creates risk. The analysis can reveal unknown or unmanaged privileged user accounts originating by failure to disable
+
 - the privileges of former employees
 - default accounts created for new endpoints
 - obsolete or abandoned accounts
+
 4. Perform an automated analysis to identify the existence of microservices, the applications that use them, and the associated user groups. Such an analysis provides context regarding microservice use as well as visibility into the potential threats they may create. The use environment might reflect a combination of privileged and nonprivileged users who are both internal and external to the organization. Use by one group might pose low risk whereas use by the other might create high risk warranting corrective action.
 5. Perform a **privileged account discovery** exercise to identify accounts that have elevated access. Accomplish discovery through an automated tool or directory analysis. Don't be surprised if there are more privileged accounts than expected. Privileged account discovery intends to identify accounts that lack accountability. Account types may include group, orphaned, rogue, and default accounts that may go unnoticed or unmanaged. Discovery should consist of all environments, including Windows, Unix/Linux, database, applications, and cloud environments that encompass infrastructure, platform, and software as a service platforms and applications.
 
@@ -258,7 +265,7 @@ Once the definition of a privileged user is established, an agency can identify 
   <div class="usa-alert__body">
     <h4 class="usa-alert__heading">Protect Your DevOps Access</h4>
     <p class="usa-alert__text">
-      DevOps tools are a primary attack target. An attacker may extract privileged account credentials from one environment (i.e., DEV) and use them in subsequent environments (i.e., production) which is what happened in the 
+      DevOps tools are a primary attack target. An attacker may extract privileged account credentials from one environment (i.e., DEV) and use them in subsequent environments (i.e., production) which is what happened in the
       <a class="usa-link" href="https://www.cisa.gov/uscert/ncas/current-activity/2021/01/06/cisa-updates-emergency-directive-21-01-supplemental-guidance-and" target="_blank" rel="noopener noreferrer">SolarWinds Orion Network Management product compromise</a>
       .
     </p>
@@ -384,35 +391,10 @@ An agency should consider using a privileged access management (PAM) tool that c
 Privileged users are at the core of protecting federal information technology assets. Government employees and contractors need elevated access to perform necessary administrative and security functions however, this creates an inherent risk of insider threat or account compromise. Agencies can reduce privileged user risk by implementing and maintaining privileged user management that encompasses both human and non-human users. It is recommended to integrate the management of your privileged users with your agency ICAM tools and provide enterprise-wide services to all agency mission applications. Prioritize privilege identity control over highest risk systems and execute on the requirements to keep federal data secure.
 
 # Appendix A: Reference Documentation
+
 The following documentation references help inform the development and direction of a privileged user program.
 
-1. [National Insider Threat Policy, November 2012](https://www.dni.gov/files/NCSC/documents/nittf/National_Insider_Threat_Policy.pdf){:target="_blank"}{:rel="noopener noreferrer"} 
-   -  This policy sets two priorities to strengthen the protection and safeguarding of classified information. It also references [Executive Order 13587 (October 2011)](https://www.dni.gov/files/NCSC/documents/nittf/EO_13587.pdf){:target="_blank"}{:rel="noopener noreferrer"} as the primary authority to establish insider threat programs.
-      1. Create the Insider Threat Task Force.
-      2. Set the minimum standards for Executive Branch Insider Threat programs.
-   
-2. [National Strategy for Information Sharing and Safeguarding, December 2012](https://www.dni.gov/files/ISE/documents/DocumentLibrary/2012infosharingstrategy.pdf){:target="_blank"}{:rel="noopener noreferrer"} 
-   - This strategy aims to strike the proper balance between sharing information with those who need it to keep our country safe and safeguarding it from those who would do us harm. As an agency works to extend its ICAM implementations across security domains, it is important to consider Goal #4 and Priority Objective #4 in relation to managing privileged users.
-       - Goal #4 focuses on identifying, preventing, and mitigating insider threat across all domains.
-       - Priority Objective #4 extends and implements the FICAM roadmap across all security domains. **Note:** The FICAM roadmap is superseded by the [FICAM architecture](https://playbooks.idmanagement.gov/arch/){:target="_blank"}{:rel="noopener noreferrer"} and [accompanying playbooks](https://playbooks.idmanagement.gov/){:target="_blank"}{:rel="noopener noreferrer"}.
-  
-3. [National Insider Threat Task Force (NITTF)](https://www.dni.gov/index.php/ncsc-how-we-work/ncsc-nittf){:target="_blank"}{:rel="noopener noreferrer"}
-    - The primary mission of the NITTF is to develop a government-wide insider threat program to deter, detect, and mitigate insider threats, including safeguarding classified information from exploitation, compromise, or other unauthorized disclosure, and accounting for risk levels as well as any individual agency needs, missions, and systems.
-
-4. [OMB Memo 17-09 - Management of Federal High Value Assets](https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/memoranda/2017/m-17-09.pdf){:target="_blank"}{:rel="noopener noreferrer"}
-    - General guidance for the planning, identification, categorization, prioritization, reporting, assessment, and remediation of federal HVAs.
-
-5. [NIST Special Publication 1800-18 - Privileged Account Management for the Financial Services Sector](https://www.nccoe.nist.gov/projects/use-cases/privileged-account-management){:target="_blank"}{:rel="noopener noreferrer"}
-    - While this special publication is focused on the financial services industry, it also contains agnostic implementation best practices.
-
-6. [NIST Interagency Report 7966 - Security of Interactive and Automated Access Management Using Secure Shell (SSH)](https://csrc.nist.gov/publications/detail/nistir/7966/final){:target="_blank"}{:rel="noopener noreferrer"}
-  - This publication assists organizations in understanding the basics of SSH interactive and automated access management in an enterprise, focusing on the management of SSH user keys.
-
-7. [Federal Identity, Credentials, and Access Management (FICAM) Architecture - Access Management](https://playbooks.idmanagement.gov/arch/access/){:target="_blank"}{:rel="noopener noreferrer"}
-     - The FICAM Architecture is a framework for an agency to use in ICAM program and solution roadmap planning. Privileged Access Management is identified as a distinct service within the access management portion of the ICAM services framework.
-
-8. [Common Sense Guide to Mitigating Insider Threats (6th Edition), February 2019](https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=540644){:target="_blank"}{:rel="noopener noreferrer"}
-    - The Software Engineering Institute at Carnegie Mellon University’s Insider Threat Center released the Common Sense Guide to provide the federal government and industry with recommendations on insider threat mitigation, based on a database of more than 700 cases. This work was sponsored by the Department of Homeland Security, Office of Cybersecurity and Communications and the U.S. Secret Service. The Common Sense Guide presents readers with 19 best practices to mitigate insider threats.
+[See them at the new FICAM Policy Matrix](https://federalist-cf03235f-a054-4178-aafb-4e1e61e0d42c.sites.pages.cloud.gov/preview/gsa/idmanagement.gov/0512-identity-policy-matrix/governance/policymatrix/)
 
 # Appendix B: Privileged User Agreement
 
@@ -425,21 +407,21 @@ Last Updated: August 10, 2021
 
 I am being granted elevated access to [AGENCY or PROGRAM NAME] controlled systems and facilities and am responsible for all actions taken under my accounts. I agree to the following:
 
-1.	I will only use my elevated privileges to perform authorized tasks or mission-related functions on systems I am authorized to access.
-2.	I will not use my elevated privileges to perform routine tasks that do not require elevated access.
-3.	I will obtain and maintain required certifications and trainings according to [AGENCY OR PROGRAM POLICY], including but not limited to specialized role-based security and privacy training.
-4.	I understand the need to safeguard all credentials at the level appropriate to the data they protect.
-5.	I will not share passwords, accounts, or other credentials with unwanted personnel.
-6.	I will only add and remove users to the [ADMINISTRATOR GROUPS] group after receiving approval/direction from the [AGENCY OR PROGRAM POINT OF CONTACT].
-7.	I will not install, modify, or remove any hardware or software without written approval from the [AGENCY OR PROGRAM POINT OF CONTACT].
-8.	I will not knowingly introduce any viruses, malicious/unwanted code, malware, or Trojan horse programs into [AGENCY OR PROGRAM NAME] systems.
-9.	I will not attempt to hack the network or connected information systems to gain access to data or agency assets which I am authorized to access. I will not use sensitive information for anything other than the purpose for which it has been authorized.
-10.	I will contact the [AGENCY OR PROGRAM POINT OF CONTACT] if I require clarification of my roles or responsibilities.
+1. I will only use my elevated privileges to perform authorized tasks or mission-related functions on systems I am authorized to access.
+2. I will not use my elevated privileges to perform routine tasks that do not require elevated access.
+3. I will obtain and maintain required certifications and trainings according to [AGENCY OR PROGRAM POLICY], including but not limited to specialized role-based security and privacy training.
+4. I understand the need to safeguard all credentials at the level appropriate to the data they protect.
+5. I will not share passwords, accounts, or other credentials with unwanted personnel.
+6. I will only add and remove users to the [ADMINISTRATOR GROUPS] group after receiving approval/direction from the [AGENCY OR PROGRAM POINT OF CONTACT].
+7. I will not install, modify, or remove any hardware or software without written approval from the [AGENCY OR PROGRAM POINT OF CONTACT].
+8. I will not knowingly introduce any viruses, malicious/unwanted code, malware, or Trojan horse programs into [AGENCY OR PROGRAM NAME] systems.
+9. I will not attempt to hack the network or connected information systems to gain access to data or agency assets which I am authorized to access. I will not use sensitive information for anything other than the purpose for which it has been authorized.
+10. I will contact the [AGENCY OR PROGRAM POINT OF CONTACT] if I require clarification of my roles or responsibilities.
 
 I understand that failure to comply with the above requirements may result in disciplinary action, including termination of employment; removal or disbarment from work on federal contracts or projects; revocation of access to federal information, information systems, and/or facilities; criminal penalties; and/or imprisonment. I also understand that violation of certain laws, such as the Privacy Act of 1974, copyright law, and 18 USC 2071 can result in monetary fines and criminal charges that may result in imprisonment.
 
 Printed Name:  
-Date:   
+Date:
 Digital Signature (preferred):  
 
 # Appendix C: NIST SP 800-53 Privileged User Overlay
@@ -473,5 +455,3 @@ For each countermeasure, an accompanying explanation provides guidance on how th
     {% endfor %}<!--category-->
   </tbody>
 </table>
-
-
