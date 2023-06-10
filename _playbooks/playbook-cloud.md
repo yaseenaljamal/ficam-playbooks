@@ -166,7 +166,7 @@ This hybrid migration scenario retains specific components on-premises while add
 
 An agency may choose this scenario if it has requirements for an on-premises Active Directory or Identity Provider capability. In this scenario, an agency may integrate cloud applications with an IDaaS while maintaining on-premises application access with the on-premises Identity Provider.
 
-{% include alert-success.html heading="Myth Busted - It's Cloud or Nothing" content="Most agencies that use an IDaaS are operating in a hybrid configuration." %} 
+{% include alert-success.html heading="Myth Busted - It's Cloud or Nothing" content="Most agencies that use an IDaaS are operating in a hybrid configuration." %}
 
 <img src="{{site.baseurl}}/assets/playbooks/cloud-full-migration.png" alt="A system architecture demonstrating a full migration. The on-premises components are fully replaced with an IDaaS." width="560" height="257">
 
@@ -176,7 +176,7 @@ An agency may choose this scenario if it has requirements for an on-premises Act
 
 The full migration scenario replaces all on-premises Identity Provider components with an IDaaS. This scenario includes replacing Active Directory and Active Directory Federation Services with an IDaaS. An agency may need an alternative solution for PIV desktop authentication, which Active Directory typically handles. An alternative solution may include using a comparable phishing-resistant authenticator as mentioned in the [Federal Zero Trust Strategy](https://zerotrust.cyber.gov/){:target="_blank"}{:rel="noopener noreferrer"}.
 
-{% include alert-warning.html heading="Business Challenge - PIV Authentication in Full Migration Scenario" content="One common challenge many agencies face is IDaaS support for certificate-based authentication and desktop authentication. Many FedRAMP IDaaS support some form of certificate-based authentication. As of this writing, there is no current replacement for PIV desktop authentication that doesn't include operating an Active Directory domain." %} 
+{% include alert-warning.html heading="Business Challenge - PIV Authentication in Full Migration Scenario" content="One common challenge many agencies face is IDaaS support for certificate-based authentication and desktop authentication. Many FedRAMP IDaaS support some form of certificate-based authentication. As of this writing, there is no current replacement for PIV desktop authentication that doesn't include operating an Active Directory domain." %}
 
 The pros and cons of each approach depend on an agency's architecture, budget, and technical knowledge. The Federal CISO Council ICAM Subcommittee is a government-wide community for sharing best practices, demonstrations, and questions. Send an email to ICAM at GSA.gov to join.
 
@@ -301,7 +301,7 @@ Here are a few goals to consider as you define your Cloud Identity strategy:
 4. **Network Access.** One of the main differences between on-premises network authentication and IDaaS is the need to steer and monitor device traffic to an IDaaS to apply authentication and authorization decisions. Steering depends on device configuration to reach a website. Typically this is a Trusted Internet Connection approved cloud access method, such as a Cloud Access Security Broker, Secure Edge solution, or some type of direct connection through a forward or reverse proxy.
 5. **Focus on Automation.** With the scale and size of an ever-increasing infrastructure, agencies should implement automation where and when it is an advantage to do so. See [Step 4](#step-4-test-and-deploy-identity-automation) for recommendations on planning an automation workflow.
 
-{% include alert-success.html heading="Myth Busted - On-premises is More Secure than Cloud" content="Using cloud services is not more or less secure than on-premises. The single location aggregation of risk and Internet-facing cloud presents new security challenges. The shared responsibility model enables more efficient and scaled defense (for example, patching is usually faster and easier for cloud services). Proper application of appropriate controls can yield a highly secure cloud deployment." %} 
+{% include alert-success.html heading="Myth Busted - On-premises is More Secure than Cloud" content="Using cloud services is not more or less secure than on-premises. The single location aggregation of risk and Internet-facing cloud presents new security challenges. The shared responsibility model enables more efficient and scaled defense (for example, patching is usually faster and easier for cloud services). Proper application of appropriate controls can yield a highly secure cloud deployment." %}
 
 ### Establish Quantifiable Metrics
 
@@ -319,7 +319,7 @@ Use your agency's operational value, or the rate of transactions in a given peri
 1. **Policy Efficiency.** Identify metric improvements aligned with federal mandates, like the number of applications only accessible with a phishing-resistant authenticator.
 2. **Operational Efficiency.** Identify metric improvements that show operational improvements, like decreasing the amount of time to deprovision a user from 2 days to 1 hour.
 
-{% include alert-info.html heading="Budgeting IDaaS" content="Most IDaaS price products in three ways: 1) the number of total users, 2) the number of monthly active users, or 3) the number of integrated applications. It's essential to understand the variable cost of each pricing method. Have this information ready when talking with an IDaaS vendor. Collect these data points as part of a Digital Identity Risk Assessment." %} 
+{% include alert-info.html heading="Budgeting IDaaS" content="Most IDaaS price products in three ways: 1) the number of total users, 2) the number of monthly active users, or 3) the number of integrated applications. It's essential to understand the variable cost of each pricing method. Have this information ready when talking with an IDaaS vendor. Collect these data points as part of a Digital Identity Risk Assessment." %}
 
 ### Cloud Identity Policy
 
@@ -364,7 +364,7 @@ A smart card is not automatically a PIV in the same way that authenticators are 
 - Should be used as part of a multi-factor authenticator.
 - Should allow a user to cut and paste a password.
 
-{% include alert-warning.html heading="Risk Management Challenge - Unique Credentials" content="Credentials should be assigned on an individual basis and not shared. If a credential must be shared, NIST recommends requiring individual authentication to access the shared credential." %} 
+{% include alert-warning.html heading="Risk Management Challenge - Unique Credentials" content="Credentials should be assigned on an individual basis and not shared. If a credential must be shared, NIST recommends requiring individual authentication to access the shared credential." %}
 
 ### Access Management
 
@@ -374,7 +374,7 @@ A primary IDaaS capability is a centralized policy enforcement point that may in
 2. **Protocol Monitoring.** Access comes in many protocols. Monitor access attempts over all possible protocols such as HTTPS and secure shell—also factor in port translation technology that converts ports and protocols (e.g., Converts HTTPS into SSH).
 3. **Enable Risk-Based Access Control.** Many cloud access tools can leverage telemetry decisions such as device type, browser type, and location for Attribute-Based Access Control. Some IDaaS may provide native or, through an API, risk information to enforce risk-based access control, including behavior analytics and threat information feeds. Verify how and if an IDaaS can support this capability.
 
-{% include alert-info.html heading="Access Policy by User Type" content="Application owners can determine ideal conditions for access, such as during working hours, from the United States, on Government Furnished Equipment, or on an approved device, by reviewing access or activity logs. Centrally identify, implement, and track access policies and exceptions with an IDaaS." %} 
+{% include alert-info.html heading="Access Policy by User Type" content="Application owners can determine ideal conditions for access, such as during working hours, from the United States, on Government Furnished Equipment, or on an approved device, by reviewing access or activity logs. Centrally identify, implement, and track access policies and exceptions with an IDaaS." %}
 
 ### Governance
 
@@ -386,13 +386,13 @@ Identity governance includes both program oversight and technical controls. Agen
 4. **Policy-Based Governance.** A key success factor is an agency policy that defines roles, identity lifecycle stages and procedures, and potentially a central repository of identity policies for infrastructure as code or multi-cloud management. Policy-based governance ensures consistent implementation of IDaaS policies.
 5. **Monitor Activity.** Enable activity logging for all users. Log monitoring was a primary success factor in [detecting activity related to Solarwinds and Active Directory compromise](https://us-cert.cisa.gov/ncas/analysis-reports/ar21-134a){:target="_blank"}{:rel="noopener noreferrer"}.
 
-{% include alert-info.html heading="Workforce Training" content="Implement Cloud Identity processes through open protocols and languages such as JavaScript Object Notation, System for Cross-domain Identity Management, OAuth, Security Assertion Markup Language, Open Policy Agent, and Open ID Connect. ICAM workforce training should incorporate these protocols and languages to include known weaknesses and how to overcome them." %} 
+{% include alert-info.html heading="Workforce Training" content="Implement Cloud Identity processes through open protocols and languages such as JavaScript Object Notation, System for Cross-domain Identity Management, OAuth, Security Assertion Markup Language, Open Policy Agent, and Open ID Connect. ICAM workforce training should incorporate these protocols and languages to include known weaknesses and how to overcome them." %}
 
-{% include alert-warning.html heading="Workforce Challenge - Informing Users" content="Any changes to the user experience can degrade workforce efficiency. Make a plan to communicate changes and prepare your users." %} 
+{% include alert-warning.html heading="Workforce Challenge - Informing Users" content="Any changes to the user experience can degrade workforce efficiency. Make a plan to communicate changes and prepare your users." %}
 
 ### Federation
 
-Federation is the technology, policies, standards, and processes that allow an agency to share digital identities, attributes, and credentials between trust domains or organizations and usually occurs through an assertion. Federation can be a technical mechanism to implement a Single Sign-On in an agency (within the same agency domain). It is also a mechanism to share identity information across domains, such as between agencies, mission partners, or trust frameworks. 
+Federation is the technology, policies, standards, and processes that allow an agency to share digital identities, attributes, and credentials between trust domains or organizations and usually occurs through an assertion. Federation can be a technical mechanism to implement a Single Sign-On in an agency (within the same agency domain). It is also a mechanism to share identity information across domains, such as between agencies, mission partners, or trust frameworks.
 
 Address the following items when taking a cloud identity approach to federation:
 
@@ -407,6 +407,7 @@ Address the following items when taking a cloud identity approach to federation:
 #### Federation and Trust Frameworks in Action
 
 Agencies leverage trust frameworks daily for different purposes. The Federal Public Key Infrastructure is one example of a federal government trust framework. See [NISTIR 8149](https://csrc.nist.gov/publications/detail/nistir/8149/final){:target="_blank"}{:rel="noopener noreferrer"} for more information on trust frameworks.
+
 1. **Governance** - The [Federal PKI Policy Authority (FPKIPA)](https://www.idmanagement.gov/governance/ficam/#federal-public-key-infrastructure-policy-authority){:target="_blank"}{:rel="noopener noreferrer"} sets policies, approves members and applicants, and oversees compliance activities of the Federal PKI Trust Framework.
 2. **Technical and Security Requirements** - The Federal PKI Policy Authority (FPKIPA) maintains the [Federal PKI Certificate Policies](https://www.idmanagement.gov/governance/fpkiaudit/){:target="_blank"}{:rel="noopener noreferrer"} that outline technical and security requirements for all members. Two policies cover internal government requirements: The Federal Common Policy Framework and The Federal Bridge Certificate Policy,
  which is an interoperability framework for federal and private sector partners.
@@ -415,11 +416,13 @@ Agencies leverage trust frameworks daily for different purposes. The Federal Pub
 5. **Recognition** - Federal PKI members are listed as an [identity trust service](https://www.idmanagement.gov/buy/trust-services/){:target="_blank"}{:rel="noopener noreferrer"} that offers government, business, or trust framework services.
 
 Federation trust frameworks also exist in the Federal Government.
+
 - [Max Authentication Federated Login](https://login.max.gov/cas/login?service=https%3A%2F%2Fportal.max.gov%2Fhome%2Flogin%2Fcas){:target="_blank"}{:rel="noopener noreferrer"} - Provides a government-to-government federation service for either access to Max.gov or an agency application. Typically, customer agencies must sign an agreement and use the Max.gov assertion profile.
 - [GSA Login.gov](https://partners.login.gov/product/){:target="_blank"}{:rel="noopener noreferrer"} - Provides primarily a public-to-government federation service. This requires an agency customer agreement and following the [login.gov assertion profile](https://developers.login.gov/){:target="_blank"}{:rel="noopener noreferrer"}.
 
 Some government agencies also recognize, participate in, and leverage non-government trust frameworks. Often, these organizations do not manage identities or credentials for their community directly. They most likely certify and annually audit services that provide identity proofing and credentialing.
-- The Federal PKI Policy Authority reviews the PKI trust frameworks of a small number of [non-government organizations](https://www.idmanagement.gov/buy/trust-services/#non-government-pki-trust-framework){:target="_blank"}{:rel="noopener noreferrer"} to determine whether the policies, processes, legal agreements, privacy protections, security controls, and audit requirements are comparable with the U.S. Government Federal PKI requirements. If comparable, the organizations that manage their communities’ rules act as a PKI bridge. 
+
+- The Federal PKI Policy Authority reviews the PKI trust frameworks of a small number of [non-government organizations](https://www.idmanagement.gov/buy/trust-services/#non-government-pki-trust-framework){:target="_blank"}{:rel="noopener noreferrer"} to determine whether the policies, processes, legal agreements, privacy protections, security controls, and audit requirements are comparable with the U.S. Government Federal PKI requirements. If comparable, the organizations that manage their communities’ rules act as a PKI bridge.
 - GSA is a member of the [Kantara Initiative](https://kantarainitiative.org/what-we-do/){:target="_blank"}{:rel="noopener noreferrer"} which is a non-profit, non-government trust framework program. It operates conformity assessment and assurance and grants trust marks to companies that show conformance to a Kantara standard based on NIST Special Publication 800-63-3. The Kantara Initiative accredits full identity service providers, component services, and Kantara accredited assessors. An agency may recognize a Kantara trust mark to federate with an external Identity Provider. They are also an associate member of the [Certification Authority / Browser Forum](https://cabforum.org/){:target="_blank"}{:rel="noopener noreferrer"}. This is an industry forum that develops PKI baseline requirements for server, code signing, and secure email certificates.
 - The [DirectTrust Health Information Service Provider](https://directtrust.org/who-we-are){:target="_blank"}{:rel="noopener noreferrer"}  is a PKI trust framework for the healthcare community collaboration leveraged by the Department of Health and Human Services (HHS). They are a non-profit trade alliance that is an ANSI-accredited standards body, a trust framework supported by policy, and an accreditor for reliable and trusted exchange across the DirectTrust network.
 - NIST is a member of the [Fast Identity Online (FIDO) Alliance](https://fidoalliance.org/overview/){:target="_blank"}{:rel="noopener noreferrer"} which is an open industry association that promotes the development of, use, and compliance with standards for authentication and device attestation. They certify vendor products to conform to their FIDO standard, including [Functional Certification, Certified Authenticator Levels, and Biometric Component Certification programs](https://fidoalliance.org/certification/){:target="_blank"}{:rel="noopener noreferrer"} . The FIDO2 authenticators are mentioned in the Office of Management and Budget (OMB) Memo 22-09 as an example of a phishing-resistant authenticator approach and in National Institute of Standards and Technology (NIST) Special Publication 800-63-3 implementation guidance as an example of impersonation-resistant.
@@ -482,40 +485,7 @@ See the [GSA Guide](https://tech.gsa.gov/guides/dev_sec_ops_guide/){:target="_bl
 
 # Appendix A. Policies, Standards, and Guidance
 
-## Policies
-
-1. [Executive Order 14028 - Improving the Nation's Cybersecurity](https://www.federalregister.gov/documents/2021/05/17/2021-10460/improving-the-nations-cybersecurity){:target="_blank"}{:rel="noopener noreferrer"}
-2. [Federal Cloud Smart Strategy](https://cloud.cio.gov/){:target="_blank"}{:rel="noopener noreferrer"}
-3. [Federal Zero Trust Strategy](https://zerotrust.cyber.gov/){:target="_blank"}{:rel="noopener noreferrer"}
-4. [Office of Management and Budget Memo 19-17](https://www.whitehouse.gov/wp-content/uploads/2019/05/M-19-17.pdf){:target="_blank"}{:rel="noopener noreferrer"}
-
-## Standards
-
-1. [NIST Special Publication 800-63 - Digital Identity Guidelines](https://pages.nist.gov/800-63-3/){:target="_blank"}{:rel="noopener noreferrer"}
-2. [NIST Special Publication 800-145 - NIST Definition of Cloud Computing](https://csrc.nist.gov/publications/detail/sp/800-145/final){:target="_blank"}{:rel="noopener noreferrer"}
-3. [NIST Special Publication 800-204B - Attribute-based Access Control for Microservices-based Applications using a Service Mesh](https://csrc.nist.gov/publications/detail/sp/800-204b/final){:target="_blank"}{:rel="noopener noreferrer"}
-4. [NIST Special Publication 800-207 - Zero Trust Architecture](https://csrc.nist.gov/publications/detail/sp/800-207/final){:target="_blank"}{:rel="noopener noreferrer"}
-5. [NIST Special Publication 800-210 - General Access Control Guidance for Cloud Systems](https://csrc.nist.gov/publications/detail/sp/800-210/final){:target="_blank"}{:rel="noopener noreferrer"}
-
-## Guidance
-
-1. [CISA Cloud Security Technical Reference Architecture](https://www.cisa.gov/publication/cloud-security-technical-reference-architecture){:target="_blank"}{:rel="noopener noreferrer"}
-2. [CISA Zero Trust Maturity Model](https://www.cisa.gov/publication/zero-trust-maturity-model){:target="_blank"}{:rel="noopener noreferrer"}
-3. [Digital Identity Risk Assessment Playbook](https://playbooks.idmanagement.gov/playbooks/dira/){:target="_blank"}{:rel="noopener noreferrer"}
-4. [Data Center and Cloud Optimization Initiative Cloud Strategy Guide](https://community.max.gov/display/Egov/Agency%2BIT%2BModernization%3A%2BEducational%2BResources%2BBuilding%2BBlocks){:target="_blank"}{:rel="noopener noreferrer"}
-5. [Enterprise Single Sign-On Playbook]({{site.baseurl}}/playbooks/sso/){:target="_blank"}{:rel="noopener noreferrer"}
-6. [FedRAMP Digital Identity Requirements (Version 1.0)](https://s3.amazonaws.com/sitesusa/wp-content/uploads/var/www/html/sites/www/app/wordpress/wp-content/blogs.dir/482/files/2016/06/FedRAMP_Digital_Identity_Requirements_v1.0.pdf){:target="_blank"}{:rel="noopener noreferrer"}
-7. [FICAM Architecture]({{site.baseurl}}/arch/){:target="_blank"}{:rel="noopener noreferrer"}
-8. [ICAM Governance Framework]({{site.baseurl}}/docs/playbook-identity-governance-framework.pdf){:target="_blank"}{:rel="noopener noreferrer"}
-9. [ICAM Program Management Playbook]({{site.baseurl}}/pm/){:target="_blank"}{:rel="noopener noreferrer"}
-10. [General Services Administration - Cloud Information Center](https://cic.gsa.gov/){:target="_blank"}{:rel="noopener noreferrer"}
-11. [NIST Interagency Report 8149 - Developing Trust Frameworks to Support Identity Federations](https://csrc.nist.gov/publications/detail/nistir/8149/final){:target="_blank"}{:rel="noopener noreferrer"}
-12. [NIST Interagency Report 8335 - Identity as a Service for Public Safety](https://csrc.nist.gov/publications/detail/nistir/8335/draft){:target="_blank"}{:rel="noopener noreferrer"}
-13. [NIST Interagency Report 8360 - Machine Learning for Access Control Policy Verification](https://csrc.nist.gov/publications/detail/nistir/8360/final){:target="_blank"}{:rel="noopener noreferrer"}
-14. [NIST Special Publication 1800-13 - Mobile Application Single Sign-On](https://csrc.nist.gov/publications/detail/sp/1800-13/final){:target="_blank"}{:rel="noopener noreferrer"}
-15. [National Security Agency Cybersecurity Information Sheet - Mitigating Cloud Vulnerabilities](https://media.defense.gov/2020/Jan/22/2002237484/-1/-1/0/CSI-MITIGATING-CLOUD-VULNERABILITIES_20200121.PDF){:target="_blank"}{:rel="noopener noreferrer"}
-16. [Open Authorization (OAuth)](https://oauth.net/){:target="_blank"}{:rel="noopener noreferrer"}
-17. [System for Cross-domain Identity Management (SCIM)](http://www.simplecloud.info/){:target="_blank"}{:rel="noopener noreferrer"}
+[See them at the new FICAM Policy Matrix](https://federalist-cf03235f-a054-4178-aafb-4e1e61e0d42c.sites.pages.cloud.gov/preview/gsa/idmanagement.gov/0512-identity-policy-matrix/governance/policymatrix/)
 
 # Appendix B. Acronyms
 
