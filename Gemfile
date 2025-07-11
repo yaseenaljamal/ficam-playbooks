@@ -1,12 +1,12 @@
 source "https://rubygems.org"
 ruby '>= 2.7.4'
 
-gem "jekyll", "~> 4.0"
+gem "jekyll", "~> 4.2", ">= 4.2.2"
 gem "execjs", "2.7.0" # https://github.com/rails/execjs/issues/99
 gem "autoprefixer-rails"
 
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.15"
+  gem "jekyll-feed", "~> 0.17", ">= 0.17.0"
   gem 'jekyll-redirect-from'
   gem 'jekyll-paginate-v2', "3.0.0"
   gem 'jekyll-sitemap'
@@ -20,4 +20,4 @@ gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Performance-booster for watching directories on Windows
 gem "wdm", "~> 0.1.0" if Gem.win_platform?
 
-gem "html-proofer", "~> 3.19", ">= 3.19.3"
+gem "html-proofer", "~> 4.0", ">= 4.0.0"
